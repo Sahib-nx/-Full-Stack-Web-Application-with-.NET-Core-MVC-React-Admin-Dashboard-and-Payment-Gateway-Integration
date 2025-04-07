@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+@model CRM.Models.ViewModel.HybridModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Product</title>
+    <link rel="stylesheet" href="~/css/Seller.css">
+    <style>
+        body {
+            background: #F3EBE1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container my-5 " style="margin-bottom: 60px; height: 90vh;">
+        <h2 class="mb-4 text-center" style="color: #4D3B2B;">Deleted Products</h2>
+
+        <table class="table ">
+
+
+            <thead>
+                <tr>
+                    <th>Product Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>SubCategory</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Hash tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var product in Model.Products)
+                {
+                    <tr>
+                        <td>@product.ProductName</td>
+                        <td>@product.ProductDescription</td>
+                        <td>@product.Category</td>
+                        <td>@product.SubCategory</td>
+                        <td>@product.Price $</td>
+                        <td>@product.Qty</td>
+                        <td>@product.HashTags</td>
+
+
+                        <td>
+
+                            <a class="btn  edit btn-sm" style="padding: 5px 30px;" asp-action="RestoreProduct" asp-controller="Seller" asp-route-id="@product.ProductId">
+                                Restore</a>
+
+                        </td>
+
+                    </tr>
+                }
+
+
+
+            </tbody>
+
+
+
+        </table>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

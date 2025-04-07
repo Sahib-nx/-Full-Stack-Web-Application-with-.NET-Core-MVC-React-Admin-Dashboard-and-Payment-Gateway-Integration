@@ -1,0 +1,675 @@
+﻿﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Perfume Image -->
+                <div class="col-md-6 text-start text-white main-img-container">
+                    <img src="~/images/AttarMAin.png" alt="Perfume Bottle" class="img-fluid">
+
+                </div>
+
+                <!-- Text Content -->
+                <div class=" col-md-6 text-center mainText">
+                    <h1 class="fw-bold display-4">A Unique <span>Fragrance</span> Journey into the <span>World</span> of
+                        <span>Magical</span> Scents
+                    </h1>
+                    <p class="lead">
+                        At Diwan Perfumes, we believe that perfume is more than just a scent,
+                        it is an expression of your personality. That’s why we offer a wide
+                        collection of authentic perfumes to suit all tastes.
+                    </p>
+
+                    <div class="d-flex justify-content-center align-items-center iconDiv ">
+                        <a href="#" class="btn px-5 py-2 ">Shop Now</a>
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @* --------------------------------------SecondSection------------------------------------------------------------- *@
+
+    <div class="container-fluid pb-5 secondSection">
+        <h2 class="text-center pt-5 mb-5">Our <span class="title-span">Distinctive</span> Product</h2>
+        <img src="~/images/SecondSection/Secondsectiondecoration.png" class="secondDec" alt="">
+
+
+        <div id="carouselExample" class="carousel slide secondsec-carousal" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- First Slide (Active) -->
+                <div class="carousel-item active">
+                    <div class="container d-flex gap-3 justify-content-center">
+                        <div class="card">
+                            <img src="images/SecondSection/Yasmeen.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center cardName">
+                                    <span>70$</span>
+                                    <span>Yasmina</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 300px;">
+                            <img src="images/SecondSection/PerfumeofEast.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>70$</span>
+                                    <span>Perfume of East</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 300px;">
+                            <img src="images/SecondSection/JwellofCaravans.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center cardName">
+                                    <span>70$</span>
+                                    <span>Jewel of Caravans</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="container d-flex gap-3 justify-content-center">
+                        <div class="card">
+                            <img src="images/SecondSection/JwellofCaravans.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center cardName">
+                                    <span>70$</span>
+                                    <span>Jewel of Caravans</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card" style="width: 300px;">
+                            <img src="images/SecondSection/Yasmeen.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>70$</span>
+                                    <span>Yasmina</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card" style="width: 300px;">
+                            <img src="images/SecondSection/PerfumeofEast.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>70$</span>
+                                    <span>Perfume of East</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Another 3 cards go here -->
+                    </div>
+                </div>
+
+                <!-- Third Slide -->
+                <div class="carousel-item">
+                    <div class="container d-flex gap-3 justify-content-center">
+                        <div class="card">
+                            <img src="images/SecondSection/JwellofCaravans.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center cardName">
+                                    <span>70$</span>
+                                    <span>Jewel of Caravans</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card" style="width: 300px;">
+                            <img src="images/SecondSection/PerfumeofEast.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>70$</span>
+                                    <span>Perfume of East</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="card" style="width: 300px;">
+                            <img src="images/SecondSection/Yasmeen.png" alt="" class="card-img-top text-center">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p style="color:grey; font-size: 0.8rem;">4.9 <span
+                                            style="color: gold;">&#9733;</span></p>
+                                    <p style="color: grey; font-size: 0.8rem;">Female</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>70$</span>
+                                    <span>Yasmina</span>
+                                </div>
+                                <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                    experience that
+                                    combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                    base.</p>
+                                <div class="order-section">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <span>1</span>
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                    <button class="order-btn">Add To Cart ←</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Another 3 cards go here -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Arrows -->
+            <button class="carousel-control-prev carousalLft" style="font-size: 4rem;" type="button"
+                data-bs-target="#carouselExample" data-bs-slide="prev">
+
+                <ion-icon name="chevron-back-circle"></ion-icon>
+            </button>
+            <button class="carousel-control-next carousalRyt" style="font-size: 4rem;" type="button"
+                data-bs-target="#carouselExample" data-bs-slide="next">
+
+                <ion-icon name="chevron-forward-circle"></ion-icon>
+
+            </button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container d-flex gap-3 justify-content-center mt-5">
+            <div class="row d-flex justify-content-center row-cols-xl-4 row-cols-md-2 row-cols-sm-2 row-gap-md-2">
+
+                <div class="col-md-6 col-sm-6 col-lg-6 col-12">
+
+
+                    <div class="card" style="width: 300px;">
+                        <img src="images/SecondSection/OneNight.jpg"
+                            style=" border-top-right-radius: 50px;  padding: 10px;" alt=""
+                            class="card-img-top text-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p style="color:grey; font-size: 0.8rem;">4.9 <span style="color: gold;">&#9733;</span>
+                                </p>
+                                <p style="color: grey; font-size: 0.8rem;">Male</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>100$</span>
+                                <span>One Night</span>
+                            </div>
+                            <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                experience that
+                                combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                base.</p>
+                            <div class="order-section">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="order-btn">Add To Cart ←</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-6 col-sm-6 col-lg-6 col-12">
+
+
+                    <div class="card" style="width: 300px;">
+                        <img src="images/SecondSection/Lavender.jpg"
+                            style=" border-top-right-radius: 50px; padding: 10px;" alt=""
+                            class="card-img-top text-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p style="color:grey; font-size: 0.8rem;">4.9 <span style="color: gold;">&#9733;</span>
+                                </p>
+                                <p style="color: grey; font-size: 0.8rem;">Female</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>70$</span>
+                                <span>Lavender</span>
+                            </div>
+                            <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                experience that
+                                combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                base.</p>
+                            <div class="order-section">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="order-btn">Add To Cart ←</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="col-md-6 col-sm-6 col-lg-6 col-12">
+
+
+
+                    <div class="card" style="width: 300px;">
+                        <img src="images/SecondSection/Oud.jpg" style=" border-top-right-radius: 50px;  padding: 10px;"
+                            alt="" class="card-img-top text-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p style="color:grey; font-size: 0.8rem;">4.9 <span style="color: gold;">&#9733;</span>
+                                </p>
+                                <p style="color: grey; font-size: 0.8rem;">Female</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>120$</span>
+                                <span>Oud</span>
+                            </div>
+                            <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                experience that
+                                combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                base.</p>
+                            <div class="order-section">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="order-btn">Add To Cart ←</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="col-md-6 col-sm-6 col-lg-6 col-12">
+
+                    <div class="card" style="width: 300px;">
+                        <img src="images/SecondSection/Roses.jpg"
+                            style=" border-top-right-radius: 50px;  padding: 10px;" alt=""
+                            class="card-img-top text-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p style="color:grey; font-size: 0.8rem;">4.9 <span style="color: gold;">&#9733;</span>
+                                </p>
+                                <p style="color: grey; font-size: 0.8rem;">Female</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>120$</span>
+                                <span>Roses</span>
+                            </div>
+                            <p class="card-text text-secondary" style="font-size: 0.8rem;">A unique fragrance
+                                experience that
+                                combines the sweetness of tropical fruits with the softness of flowers and a woody
+                                base.</p>
+                            <div class="order-section">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="order-btn">Add To Cart ←</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    @* -----------------------------ThirdSection---------------------------------------------ThirdSection-------------------------- *@
+    <div class="container-fluid text-center pb-5  thirdSection ">
+        <h2>Why <span style="color: #C09766;">Choose Us?</span></h2>
+        <img src="~/images/ThridSection/ThridDec.png" class="thirdDec" alt="">
+
+        <div class="container mt-5">
+            <div class="row roww justify-content-center g-4">
+                <!-- Column 1 -->
+                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center coll-md-6 col">
+                    <div class="whychoosediv" style=" border-top-right-radius: 50px; border-bottom-left-radius: 50px;">
+                        <h3>Exclusive Offers</h3>
+                        <p>We offer you a unique shopping experience, with exclusive offers and free gifts.</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center coll-md-6 col">
+                    <div class="whychoosediv" style=" border-bottom-right-radius: 50px; border-top-left-radius: 50px;">
+                        <h3>Unbeatable Quality</h3>
+                        <p>Offering you a unique aromatic experience, we are keen to select the finest natural
+                            ingredients from around the world, and we craft our perfumes by hand with great skill</p>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center coll-md-6 col">
+                    <div class="whychoosediv" style="border-top-left-radius: 50px; border-bottom-right-radius: 50px;">
+                        <h3>Return Guarantee</h3>
+                        <p>We offer a 5-day money back guarantee so you can experience the fragrance with confidence. If
+                            you are not satisfied with the product, you can return it for a full refund.</p>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center coll-md-6 col">
+                    <div class="whychoosediv" style=" border-bottom-left-radius: 50px;">
+                        <h3>Fast Shipping</h3>
+                        <p>We are keen to deliver your order as quickly as possible. We also provide an express delivery
+                            service to ensure that your order arrives as quickly as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    @* -----------------------------------------------------ForthSection---------------------------------------------------- *@
+
+    <div class="container-fluid forthSection">
+        <div class="container offer-container text-center pt-3">
+            <p>A Golden Opportunity,Don't Miss it!</p>
+
+            <p>Enjoy an exclusive 15% discount when you create your account.</p>
+
+            <p>Enjoy your Special today and enjoy a fragrant scent with our exclusive collection, and make every moment
+                unforgettable;.</p>
+
+            <button class="btn mb-3 " style="background: #EADDCE; opacity: 0.5;">Order Now←</button>
+
+
+
+
+        </div>
+
+    </div>
+<div class="container-fluid ing-main-con mt-5">
+        <div class="text-center madewithlove-container">
+            <h2>Made with <span style="color: #C09766;">love</span> especially for <span
+                                style="color: #C09766;">you</span></h2>
+            <p>Our story is told through perfumes. Each of our perfumes tells a unique story, a story inspired by nature
+                            and heritage, combining the finest natural ingredients to take you on a unique sensory journey to
+                            express your own identity with a distinctive aromatic story.</p>
+        </div>
+        <div class="container">
+            <div class="row align-items-center Angry ">
+                <!-- Text Content -->
+                <div class="col-lg-6 col-md-12 order-lg-1 order-md-2 order-2 ">
+
+                    <h4 class="forgotted-H text-center mt-4">Our <span style="color: #C09766;">Natural</span> Ingredients</h4>
+
+                    <div class="row rowww justify-content-center g-1 mt-3">
+                        <div class="col-12 col-md-6 mt-3 naturalING ">
+                            <h5 style="color: #C09766;">Musk</h5>
+                            <p style="font-size: 1rem;">It adds smoothness and depth to the fragrance, and is known for
+                                its warm, leathery notes</p>
+                        </div>
+                        <div class="col-12 col-md-6 mt-3 naturalING ">
+                            <h5 style="color: #C09766;">Bergamot</h5>
+                            <p style="font-size: 1rem;">Adds a refreshing acidic touch that gives energy and freshness</p>
+                        </div>
+                        <div class="col-12 col-md-6 naturalING ">
+                            <h5 style="color: #C09766;">Sandalwood</h5>
+                            <p style="font-size: 1rem;">A warm, calm woody base adds depth to the fragrance.</p>
+                        </div>
+                        <div class="col-12 col-md-6 naturalING">
+                            <h5 style="color: #C09766;">Absolute Rose</h5>
+                            <p style="font-size: 1rem;">A pink, delicate scent that reflects the sweetness and romance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Content -->
+                <div class="col-lg-6 col-md-12 order-lg-2 order-md-1 order-1 mt-md-4">
+
+
+
+                    <div class="ingredients-img-container">
+                        <img src="/images/ThridSection/IngrediantIMG.png" style="border-top-right-radius: 50px;
+                            border-bottom-left-radius: 50px; border: 4px solid #C09766;" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script>
+        function increaseQuantity(button) {
+            let quantitySpan = button.previousElementSibling;
+            let quantity = parseInt(quantitySpan.textContent);
+            quantitySpan.textContent = quantity + 1;
+        }
+
+        function decreaseQuantity(button) {
+            let quantitySpan = button.nextElementSibling;
+            let quantity = parseInt(quantitySpan.textContent);
+            if (quantity > 1) {
+                quantitySpan.textContent = quantity - 1;
+            }
+        }
+    </script>
+
+
+
+    <script src="~/js/Home.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+
+</html>

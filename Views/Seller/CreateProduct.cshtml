@@ -1,0 +1,403 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="~/css/Seller.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container main-container">
+        <h2 class="page-title">
+            <i class="fas fa-box-open me-2"></i> Create New Product
+        </h2>
+
+        <form id="createProductForm" asp-action="CreateProduct" method="post" class="needs-validation" novalidate>
+            <div class="row g-4">
+                <!-- Basic Information Section -->
+                <div class="col-12 form-section">
+                    <h4 class="section-title">Basic Information</h4>
+                </div>
+
+                <div class="col-md-6 form-section">
+                    <div class="mb-3">
+                        <label for="ProductName" class="form-label">
+                            <i class="fas fa-tag me-1"></i> Product Name
+                        </label>
+                        <input name="ProductName" id="ProductName" class="form-control" required
+                            placeholder="Enter product name" />
+                        <div class="invalid-feedback">Please provide a product name.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ProductDescription" class="form-label">
+                            <i class="fas fa-align-left me-1"></i> Description
+                        </label>
+                        <textarea name="ProductDescription" id="ProductDescription" class="form-control" rows="4"
+                            required placeholder="Describe your product..."></textarea>
+                        <div class="invalid-feedback">Please provide a product description.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 form-section">
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <i class="fas fa-image me-1"></i> Product Image
+                        </label>
+                        <div class="image-preview" id="imagePreview">
+                            <img id="preview" src="/api/placeholder/400/320" alt="Product image placeholder">
+                        </div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <input type="url" name="ProductProfileUrl" id="ProductProfileUrl"
+                                class="form-control me-md-2 mb-2 mb-md-0" required placeholder="Enter image URL" />
+                            <button type="button" class="btn image-upload-btn" id="previewButton">
+                                <span><i class="fas fa-eye me-1"></i> Preview</span>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback">Please provide an image URL.</div>
+                    </div>
+                </div>
+
+                <!-- Categorization Section -->
+                <div class="col-12 form-section">
+                    <h4 class="section-title">Categorization</h4>
+                </div>
+
+                <div class="col-md-4 form-section">
+                    <div class="mb-3">
+                        <label for="Category" class="form-label">
+                            <i class="fas fa-folder me-1"></i> Category
+                        </label>
+                        <select name="Category" id="Category" class="form-select" required>
+                            <option value="" selected disabled>Select a category</option>
+                            <option value="Everyday Wear">Everyday Wear</option>
+                            <option value="Office Wear">Office Wear</option>
+                            <option value="Daily Wear">Daily Wear</option>
+                            <option value="Luxury & Premium Perfumes">Luxury & Premium Perfumes</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a category.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 form-section">
+                    <div class="mb-3">
+                        <label for="SubCategory" class="form-label">
+                            <i class="fas fa-sitemap me-1"></i> Subcategory
+                        </label>
+                        <select name="SubCategory" id="SubCategory" class="form-select" required>
+                            <option value="" selected disabled>Select a subcategory</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a subcategory.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 form-section">
+                    <div class="mb-3">
+                        <label for="HashTags" class="form-label">
+                            <i class="fas fa-hashtag me-1"></i> Hashtags
+                        </label>
+                        <div class="tag-input" id="tagContainer">
+                            <input type="text" id="tagInput" placeholder="Type and press Enter" />
+                        </div>
+                        <input type="hidden" name="HashTags" id="HashTags" required />
+                        <small class="text-muted">Press Enter after each tag</small>
+                        <div class="invalid-feedback">Please add at least one hashtag.</div>
+                    </div>
+                </div>
+
+                <!-- Inventory & Pricing Section -->
+                <div class="col-12 form-section">
+                    <h4 class="section-title">Inventory & Pricing</h4>
+                </div>
+
+                <div class="col-md-3 col-sm-6 form-section">
+                    <div class="mb-3">
+                        <label for="Price" class="form-label">
+                            <i class="fas fa-dollar-sign me-1"></i> Price
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input name="Price" id="Price" class="form-control" type="number" min="0.01" step="0.01"
+                                required placeholder="0.00" />
+                        </div>
+                        <div class="invalid-feedback">Please provide a valid price.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 form-section">
+                    <div class="mb-3">
+                        <label for="SalePrice" class="form-label">
+                            <i class="fas fa-tags me-1"></i> Sale Price (Optional)
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input name="SalePrice" id="SalePrice" class="form-control" type="number" min="0.01"
+                                step="0.01" placeholder="0.00" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 form-section">
+                    <div class="mb-3">
+                        <label for="Qty" class="form-label">
+                            <i class="fas fa-cubes me-1"></i> Quantity
+                        </label>
+                        <input name="Qty" id="Qty" class="form-control" type="number" min="1" required
+                            placeholder="0" />
+                        <div class="invalid-feedback">Please provide quantity.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 form-section">
+                    <div class="mb-3">
+                        <label for="SKU" class="form-label">
+                            <i class="fas fa-barcode me-1"></i> SKU
+                        </label>
+                        <div class="input-group">
+                            <input name="SKU" id="SKU" class="form-control" required placeholder="Product SKU" />
+                            <button class="btn btn-outline-secondary" type="button" id="generateSKU">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback">Please provide a SKU.</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="col-12 d-flex justify-content-between mt-4 form-section">
+                    <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-center">
+                        <button type="button" class="btn btn-outline-secondary mb-2 mb-md-0 w-100 w-md-auto">
+                            <span><i class="fas fa-times me-1"></i> Cancel</span>
+                        </button>
+                        <div class="d-flex flex-column flex-md-row action-buttons">
+                            <button type="button" class="btn btn-outline-secondary mb-2 mb-md-0 me-md-2 w-100">
+                                <span><i class="fas fa-save me-1"></i> Save Draft</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary pulse w-100">
+                                <span><i class="fas fa-check-circle me-1"></i> Create Product</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+
+        // Image preview functionality with animation
+        document.getElementById('previewButton').addEventListener('click', function () {
+            const imageUrl = document.getElementById('ProductProfileUrl').value;
+            const previewImg = document.getElementById('preview');
+            const previewContainer = document.getElementById('imagePreview');
+
+            if (imageUrl) {
+                previewImg.style.opacity = "0";
+                setTimeout(() => {
+                    previewImg.src = imageUrl;
+                    previewImg.style.opacity = "1";
+                    previewContainer.classList.add('animate__animated', 'animate__pulse');
+                    setTimeout(() => {
+                        previewContainer.classList.remove('animate__animated', 'animate__pulse');
+                    }, 1000);
+                }, 300);
+            } else {
+                previewImg.src = "/api/placeholder/400/320";
+                alert("Please enter an image URL first");
+            }
+        });
+
+        // Hashtag functionality with animations
+        const tagInput = document.getElementById('tagInput');
+        const tagContainer = document.getElementById('tagContainer');
+        const hashTagsInput = document.getElementById('HashTags');
+        let tags = [];
+
+        tagInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                e.preventDefault();
+                let value = this.value.trim();
+                if (!value.startsWith('#')) {
+                    value = '#' + value;
+                }
+
+                if (!tags.includes(value)) {
+                    // Add animation to the container
+                    tagContainer.classList.add('animate__animated', 'animate__pulse');
+                    setTimeout(() => {
+                        tagContainer.classList.remove('animate__animated', 'animate__pulse');
+                    }, 500);
+
+                    tags.push(value);
+                    renderTags();
+                    this.value = '';
+                    updateHashTagsInput();
+                }
+            }
+        });
+
+        function renderTags() {
+            // Clear all tags first (except the input)
+            const elements = tagContainer.querySelectorAll('.tag');
+            elements.forEach(element => {
+                element.remove();
+            });
+
+            // Add all tags
+            tags.forEach((tag, index) => {
+                const tagElement = document.createElement('span');
+                tagElement.classList.add('tag');
+                tagElement.innerHTML = `${tag} <span class="remove-tag" data-index="${index}">×</span>`;
+                tagContainer.insertBefore(tagElement, tagInput);
+            });
+
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-tag').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    const tagToRemove = this.parentNode;
+
+                    // Add fade out animation
+                    tagToRemove.style.opacity = '0';
+                    tagToRemove.style.transform = 'scale(0.8)';
+
+                    setTimeout(() => {
+                        tags.splice(index, 1);
+                        renderTags();
+                        updateHashTagsInput();
+                    }, 300);
+                });
+            });
+        }
+
+        function updateHashTagsInput() {
+            hashTagsInput.value = tags.join(' ');
+        }
+
+        // Category and subcategory relationship with animation
+        const categorySelect = document.getElementById('Category');
+        const subcategorySelect = document.getElementById('SubCategory');
+
+        const subcategories = {
+            'Everyday Wear': ['Men', 'Women', 'Unisex'],
+            'Office Wear':  ['Men', 'Women', 'Unisex'],
+            'Daily Wear':  ['Men', 'Women', 'Unisex'],
+            'Luxury & Premium Perfumes':  ['Men', 'Women', 'Unisex']
+        };
+
+        categorySelect.addEventListener('change', function () {
+            const category = this.value;
+
+            // Add animation to subcategory select
+            subcategorySelect.classList.add('animate__animated', 'animate__fadeOut');
+
+            setTimeout(() => {
+                subcategorySelect.innerHTML = '<option value="" selected disabled>Select a subcategory</option>';
+
+                if (subcategories[category]) {
+                    subcategories[category].forEach(sub => {
+                        const option = document.createElement('option');
+                        option.value = sub;
+                        option.textContent = sub;
+                        subcategorySelect.appendChild(option);
+                    });
+                }
+
+                subcategorySelect.classList.remove('animate__fadeOut');
+                subcategorySelect.classList.add('animate__fadeIn');
+
+                setTimeout(() => {
+                    subcategorySelect.classList.remove('animate__animated', 'animate__fadeIn');
+                }, 500);
+            }, 300);
+        });
+
+        // SKU Generator with animation
+        document.getElementById('generateSKU').addEventListener('click', function () {
+            const category = document.getElementById('Category').value;
+            const productName = document.getElementById('ProductName').value;
+            const skuField = document.getElementById('SKU');
+
+            if (category && productName) {
+                const categoryPrefix = category.substring(0, 3).toUpperCase();
+                const nameComponent = productName.replace(/[^a-zA-Z0-9]/g, '').substring(0, 5).toUpperCase();
+                const randomNum = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+
+                // Animate the SKU field
+                skuField.classList.add('animate__animated', 'animate__fadeOut');
+
+                setTimeout(() => {
+                    skuField.value = `${categoryPrefix}-${nameComponent}-${randomNum}`;
+                    skuField.classList.remove('animate__fadeOut');
+                    skuField.classList.add('animate__fadeIn');
+
+                    setTimeout(() => {
+                        skuField.classList.remove('animate__animated', 'animate__fadeIn');
+                    }, 500);
+                }, 300);
+            } else {
+                alert('Please enter a category and product name first to generate SKU');
+            }
+        });
+
+        // Add focus animations to all form controls
+        document.querySelectorAll('.form-control, .form-select').forEach(element => {
+            element.addEventListener('focus', function () {
+                this.parentNode.querySelector('.form-label')?.classList.add('animate__animated', 'animate__pulse');
+                setTimeout(() => {
+                    this.parentNode.querySelector('.form-label')?.classList.remove('animate__animated', 'animate__pulse');
+                }, 500);
+            });
+        });
+
+        // Add click effects for all buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function () {
+                this.classList.add('animate__animated', 'animate__pulse');
+                setTimeout(() => {
+                    this.classList.remove('animate__animated', 'animate__pulse');
+                }, 500);
+            });
+        });
+
+        // Staggered animations on load
+        document.addEventListener('DOMContentLoaded', function () {
+            const formSections = document.querySelectorAll('.form-section');
+            formSections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('animate__animated', 'animate__fadeIn');
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CRM.Models.ViewModel.HybridModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyArchivet</title>
+    <link rel="stylesheet" href="~/css/Seller.css">
+
+</head>
+
+<body>
+
+
+    <div class="container my-5" style=" margin-bottom: 60px; height: 90vh;">
+        <h2 class="mb-4">Archived Products</h2>
+
+
+        <table class="table table-stripped table-hover">
+
+            <thead>
+                <tr>
+                    <th>Product Title</th>
+                    <th>Product Description</th>
+                    <th>Category</th>
+                    <th>SubCategory</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>HashTags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var product in Model.Products)
+                {
+                    <tr>
+                        <td>@product.ProductName</td>
+                        <td>@product.ProductDescription</td>
+                        <td>@product.Category</td>
+                        <td>@product.SubCategory</td>
+                        <td>@product.Price</td>
+                        <td>@product.Qty</td>
+                        <td>@product.HashTags</td>
+
+
+                        <td>
+
+                            <a asp-action="UnArchiveProduct" asp-controller="Seller" asp-route-id="@product.ProductId"
+                                class="btn  edit btn-sm" style="padding: 5px 20px;">Unarchive</a>
+
+                            <a asp-action="DeleteProduct" asp-controller="Seller" asp-route-id="@product.ProductId"
+                                class="btn archive btn-sm" style="padding: 5px 20px;"> Recycle bin</a>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>

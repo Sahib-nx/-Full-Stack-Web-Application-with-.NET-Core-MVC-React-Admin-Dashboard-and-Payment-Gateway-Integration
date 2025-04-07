@@ -1,0 +1,286 @@
+﻿@using CRM.Models.ViewModel
+@using CRM.Types
+@model CRM.Models.ViewModel.HybridModel
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CRM</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CRM.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body style="overflow-x: hidden;">
+
+
+    <nav class="navbar-main">
+        <div class="container nav-container">
+            <div class="navbar-content">
+                <div class="navbar-brand">
+                    <a href="#"><img src="~/images/logo.png" alt="Logo" class="navbar-logo"></a>
+                </div>
+
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="navbar-collapse" id="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="/home/index" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/Home/Shop" class="nav-link">Shop</a></li>
+                        <li class="nav-item"><a href="/home/AboutUs" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="/home/ContactUs" class="nav-link">Contact Us</a></li>
+                    </ul>
+
+                    <div class="navbar-actions">
+                        <a href="#" class="navbar-icon-link cart-icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                            <span class="icon-badge">0</span>
+                        </a>
+
+                        <a href="#" class="navbar-icon-link search-icon" id="search-toggle">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </a>
+
+                        @if (Model?.Navbar.Isloggedin == true)
+                        {
+                            @if (Model?.Navbar.UserRole == Role.Seller)
+                            {
+                                <a href="/Seller/SellerDashboard" class="navbar-icon-link user-icon">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </a>
+                            }
+                            else if (Model?.Navbar.UserRole == Role.Buyer)
+                            {
+                                <a href="/Buyer/BuyerDashboard" class="navbar-icon-link user-icon">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </a>
+                            }
+                            else if (Model?.Navbar.UserRole == Role.Admin)
+                            {
+                                <a href="/Admin/AdminDashboard" class="navbar-icon-link user-icon">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </a>
+                            }
+                        }
+                        else
+                        {
+                            <a href="/user/Login" class="navbar-icon-link user-icon">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-container" id="search-container">
+            <div class="container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products..." class="search-input">
+                    <button type="submit" class="search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                    <button type="button" class="search-close" id="search-close">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-section" style="background:#A18059; color: #F3EBE1;">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <div class="container relative">
+
+            <div class="sofa-img">
+                <img src="~/images/footerLogo.png" alt="Image" class="img-fluid">
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="subscription-form">
+                        <h3 class="d-flex align-items-center"><span class="me-1">Subscribe to Newsletter</span></h3>
+
+                        <form action="#" class="row g-3">
+                            <div class="col-auto">
+                                <input type="text" class="form-control" placeholder="Enter your name">
+                            </div>
+                            <div class="col-auto">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary" style="background: #F3EBE1;color: #A18059;">
+                                    <span class="fa fa-paper-plane"></span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Diwan-Al-Oud<span>.</span></a>
+                    </div>
+                    <p class="mb-4">At Diwan-Al-Oud, we blend tradition with elegance, crafting exquisite Perfume from
+                        the finest natural ingredients. Each drop is a journey through time, capturing the essence of
+                        nature’s beauty and the artistry of perfumery. Immerse yourself in a world of luxury, where
+                        fragrance becomes a signature of your soul.</p>
+
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3 footerlist">
+                            <ul class="list-unstyled">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Knowledge base</a></li>
+                                <li><a href="#">Live chat</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Our team</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Shipping and return</a></li>
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+                            Diwan-Al-Oud
+
+
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <ul class="list-unstyled d-inline-flex ms-auto">
+                            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    @* <script>
+        const closebtn = document.getElementById("close-btn")
+        const hamburger = document.getElementById("hamburger")
+        const sidebar = document.getElementById("Div-sidebar")
+
+        hamburger.addEventListener("click", () => {
+            sidebar.style.left = "0"
+        })
+
+        closebtn.addEventListener("click", () => {
+            sidebar.style.left = "-300px"
+        })
+    </script> *@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @* ---------------------------ionicons---------------------------------- *@
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+
+</html>

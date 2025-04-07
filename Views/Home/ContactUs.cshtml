@@ -1,0 +1,262 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+<head>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="~/css/home.css">
+</head>
+
+<section class="contact-hero">
+    <div class="contact-bg-accent accent-1"></div>
+    <div class="contact-bg-accent accent-2"></div>
+    
+    <div class="hero-content">
+        <h1 class="hero-title">Get In Touch</h1>
+        <p class="hero-subtitle">We'd love to hear from you. Whether you have a question about our products, need assistance with an order, or simply want to share your experience, we're here to help.</p>
+    </div>
+</section>
+
+<div class="contact-container">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2 class="info-title">Contact Information</h2>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Visit Our Flagship Store</h3>
+                    <p>123 Scent Avenue, Fragrance District<br>New York, NY 10001</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+12125551234">+1 (212) 555-1234</a></p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:contact@yourperfumestore.com">contact@yourperfumestore.com</a></p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Customer Service Hours</h3>
+                    <p>Monday-Friday: 9am - 6pm EST<br>Weekend: 10am - 4pm EST</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        
+        <div class="contact-form-container">
+            <h2 class="form-title">Send Us a Message</h2>
+            
+            <div class="success-message" id="success-message">
+                Your message has been sent successfully. We'll get back to you soon!
+            </div>
+            
+            <form id="contact-form" method="post">
+                @Html.AntiForgeryToken()
+                
+                <div class="form-group">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                    <div class="invalid-feedback">Please enter a subject</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" required></textarea>
+                    <div class="invalid-feedback">Please enter your message</div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<section class="map-section">
+    <div class="map-container">
+        <h2 class="map-title scroll-animation">Visit Our Store</h2>
+        <div class="map-wrapper scroll-animation">
+            <!-- You would replace this with an actual Google Maps embed -->
+            <img src="/api/placeholder/1200/450" alt="Store Location Map" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+    </div>
+</section>
+
+<section class="store-hours">
+    <div class="hours-container">
+        <h2 class="hours-title scroll-animation">Store Hours</h2>
+        
+        <div class="hours-card scroll-animation">
+            <div class="hours-grid">
+                <div class="hours-col">
+                    <h3>New York Flagship</h3>
+                    <ul class="hours-list">
+                        <li class="hours-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">10am - 7pm</span>
+                        </li>
+                        <li class="hours-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">10am - 8pm</span>
+                        </li>
+                        <li class="hours-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">11am - 6pm</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="hours-col">
+                    <h3>Los Angeles Boutique</h3>
+                    <ul class="hours-list">
+                        <li class="hours-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">10am - 7pm</span>
+                        </li>
+                        <li class="hours-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">10am - 8pm</span>
+                        </li>
+                        <li class="hours-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">11am - 6pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollElements = document.querySelectorAll('.scroll-animation');
+        
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= 
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+        
+        const displayScrollElement = (element) => {
+            element.classList.add('active');
+        };
+        
+        const hideScrollElement = (element) => {
+            element.classList.remove('active');
+        };
+        
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+        
+        // Initialize
+        handleScrollAnimation();
+    });
+    
+    // Form validation and submission
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                const formControls = contactForm.querySelectorAll('.form-control');
+                
+                formControls.forEach(control => {
+                    if (!control.checkValidity()) {
+                        isValid = false;
+                        control.classList.add('is-invalid');
+                    } else {
+                        control.classList.remove('is-invalid');
+                    }
+                });
+                
+                if (isValid) {
+                    // In a real application, you would submit the form data to your backend here
+                    // For demonstration, we'll just show the success message
+                    successMessage.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                }
+            });
+            
+            // Clear validation styling on input
+            contactForm.querySelectorAll('.form-control').forEach(control => {
+                control.addEventListener('input', function() {
+                    if (this.checkValidity()) {
+                        this.classList.remove('is-invalid');
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+   

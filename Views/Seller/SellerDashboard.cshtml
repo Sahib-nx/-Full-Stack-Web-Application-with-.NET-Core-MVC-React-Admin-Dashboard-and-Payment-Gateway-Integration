@@ -1,0 +1,322 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Seller.css">
+    <style>
+      
+        
+ 
+    </style>
+</head>
+<body>
+    <div class="dashboard-container mt-5">
+        <div class="header">
+            <div>
+                <h1 class="welcome">Welcome Back, Seller!</h1>
+                <p class="date">Wednesday, February 26, 2025</p>
+            </div>
+            <button class="logout-btn" onclick="location.href='/User/Logout'">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+
+        <div class="quick-links">
+            <a href="/seller/myproducts" class="quick-link">
+                <i class="fas fa-box"></i>
+                <span>Products</span>
+            </a>
+            <a href="/seller/myarchive" class="quick-link">
+                <i class="fas fa-archive"></i>
+                <span>Archive</span>
+            </a>
+            <a href="/seller/deletedproducts" class="quick-link">
+                <i class="fas fa-trash-alt"></i>
+                <span>Deleted</span>
+            </a>
+            <a href="/user/changeroletobuyer" class="quick-link">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Change Role</span>
+            </a>
+            <a href="/seller/orders" class="quick-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Active Products</span>
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                </div>
+                <div class="stat-value" id="product-count">42</div>
+                <div class="stat-label">+3 from last week</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Pending Orders</span>
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+                <div class="stat-value" id="order-count">7</div>
+                <div class="stat-label">Need attention</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Revenue (Monthly)</span>
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="stat-value" id="revenue">$4,285</div>
+                <div class="stat-label">+12% from January</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Avg. Rating</span>
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="stat-value" id="rating">4.8</div>
+                <div class="stat-label">From 56 reviews</div>
+            </div>
+        </div>
+
+        <div class="content-row">
+            <div class="content-card">
+                <h2 class="section-title">
+                    <i class="fas fa-history"></i>
+                    Recent Activity
+                </h2>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="activity-details">
+                        <div class="activity-title">New Order #1089</div>
+                        <div class="activity-time">Today, 09:45 AM</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="activity-details">
+                        <div class="activity-title">New 5-star Review</div>
+                        <div class="activity-time">Yesterday, 3:30 PM</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="activity-details">
+                        <div class="activity-title">Payment Received: $178.50</div>
+                        <div class="activity-time">Yesterday, 10:15 AM</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="activity-details">
+                        <div class="activity-title">Inventory Alert: "Ceramic Mug" (Low Stock)</div>
+                        <div class="activity-time">Feb 25, 2025</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">
+                    <i class="fas fa-fire"></i>
+                    Top Selling Products
+                </h2>
+                <ul class="product-list">
+                    <li class="product-item">
+                        <div class="product-img">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Handcrafted Wooden Bowl</div>
+                            <div class="product-meta">
+                                <span>SKU: WD-189</span>
+                                <span>Sold: 24 units</span>
+                            </div>
+                        </div>
+                        <div class="product-price">$45.99</div>
+                        <div class="product-actions">
+                            <button class="product-btn" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="product-btn" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-img">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Ceramic Coffee Mug Set</div>
+                            <div class="product-meta">
+                                <span>SKU: CM-103</span>
+                                <span>Sold: 18 units</span>
+                            </div>
+                        </div>
+                        <div class="product-price">$32.50</div>
+                        <div class="product-actions">
+                            <button class="product-btn" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="product-btn" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-img">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Woven Basket - Large</div>
+                            <div class="product-meta">
+                                <span>SKU: BK-210</span>
+                                <span>Sold: 15 units</span>
+                            </div>
+                        </div>
+                        <div class="product-price">$38.75</div>
+                        <div class="product-actions">
+                            <button class="product-btn" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="product-btn" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="action-btn">
+                <i class="fas fa-plus"></i>
+                Add Product
+            </button>
+            <button class="action-btn">
+                <i class="fas fa-bolt"></i>
+                Run Promotion
+            </button>
+            <button class="action-btn">
+                <i class="fas fa-tags"></i>
+                Update Prices
+            </button>
+            <button class="action-btn">
+                <i class="fas fa-file-export"></i>
+                Export Data
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Animate numbers in stat cards
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            const range = end - start;
+            const minTimer = 50;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            
+            stepTime = Math.max(stepTime, minTimer);
+            
+            let startTime = new Date().getTime();
+            let endTime = startTime + duration;
+            let timer;
+            
+            function run() {
+                let now = new Date().getTime();
+                let remaining = Math.max((endTime - now) / duration, 0);
+                let value = Math.round(end - (remaining * range));
+                
+                if (id === 'revenue') {
+                    obj.innerText = '$' + value.toLocaleString();
+                } else if (id === 'rating') {
+                    obj.innerText = (value / 10).toFixed(1);
+                } else {
+                    obj.innerText = value;
+                }
+                
+                if (value === end) {
+                    clearInterval(timer);
+                }
+            }
+            
+            timer = setInterval(run, stepTime);
+            run();
+        }
+
+        // Add shimmer effect to items
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add shimmer class to cards
+            const cards = document.querySelectorAll('.stat-card, .content-card');
+            cards.forEach(card => {
+                card.classList.add('shimmer');
+                
+                // Remove shimmer after animation
+                setTimeout(() => {
+                    card.classList.remove('shimmer');
+                }, 2000);
+            });
+            
+            // Animate stat values with delay
+            setTimeout(() => {
+                animateValue('product-count', 0, 42, 1500);
+                animateValue('order-count', 0, 7, 1000);
+                animateValue('revenue', 0, 4285, 2000);
+                animateValue('rating', 0, 48, 1500);
+            }, 800);
+            
+            // Add pulse animation to quick action buttons
+            const actionBtns = document.querySelectorAll('.action-btn');
+            actionBtns.forEach((btn, index) => {
+                setTimeout(() => {
+                    btn.style.animation = 'pulse 2s ease';
+                    
+                    // Remove animation after it completes
+                    setTimeout(() => {
+                        btn.style.animation = '';
+                    }, 2000);
+                }, 2000 + (index * 200));
+            });
+            
+            // Add hover effect to cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.stat-icon i');
+                    icon.style.transform = 'scale(1.2) rotate(10deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.stat-icon i');
+                    icon.style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Buyer.css">
+</head>
+
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">Buyer Dashboard</h1>
+        <div class="user-profile">
+            <div class="profile-image">
+                @{
+                    var userName = ViewBag.Username as string;
+                    var initials = string.IsNullOrEmpty(userName) ? "U" : userName[0].ToString().ToUpper();
+                }
+                @initials
+            </div>
+            <div class="user-info">
+                <h3 class="user-name">@(ViewBag.Username ?? "Welcome User")</h3>
+                <p class="user-email">@(ViewBag.UserEmail ?? "user@example.com")</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="card-title">Your Cart</h3>
+            <p class="card-description">View and manage items in your shopping cart.</p>
+            <a asp-controller="Buyer" asp-action="Cart" class="card-link">Go to Cart</a>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-box-open"></i>
+            </div>
+            <h3 class="card-title">Your Orders</h3>
+            <p class="card-description">Track your orders and view order history.</p>
+            <a href="@Url.Action("Index", "Orders", new { area = "Buyer" })" class="card-link">View Orders</a>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="card-title">Wishlist</h3>
+            <p class="card-description">Manage your favorite products and wishlists.</p>
+            <a href="@Url.Action("Index", "Wishlist", new { area = "Buyer" })" class="card-link">View Wishlist</a>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <h3 class="card-title">Account Settings</h3>
+            <p class="card-description">Update your profile and account preferences.</p>
+            <a href="@Url.Action("Settings", "User")" class="card-link">Edit Profile</a>
+        </div>
+    </div>
+
+    <div class="dashboard-footer">
+        <div class="footer-nav">
+            <a href="@Url.Action("ChangeRoleToSeller", "User")" class="footer-link">Switch to Seller Dashboard</a>
+            <span>|</span>
+            <a href="@Url.Action("Index", "Help")" class="footer-link">Help Center</a>
+            <span>|</span>
+            <a href="@Url.Action("Logout", "User")" class="logout-button">Logout</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add Font Awesome for icons
+    if (!document.getElementById('fontawesome-css')) {
+        var link = document.createElement('link');
+        link.id = 'fontawesome-css';
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
+        document.head.appendChild(link);
+    }
+</script>

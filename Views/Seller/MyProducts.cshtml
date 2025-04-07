@@ -1,0 +1,201 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CRM.Models.ViewModel.HybridModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProducts</title>
+    <link rel="stylesheet" href="~/css/Seller.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="container my-product-container">
+        <header>
+            <h2>Your Products</h2>
+            <div class="view-actions">
+                <button id="grid-view" class="grid-view-btn active-view">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button id="list-view" class="list-view-btn">
+                    <i class="fas fa-list"></i>
+                </button>
+                <a asp-controller="Seller" asp-action="CreateProduct" class="add-product-btn">
+                    <i class="fas fa-plus"></i> Add Product
+                </a>
+            </div>
+        </header>
+        
+        <div class="search-container-my">
+            <input type="text" id="product-search" placeholder="Search products..." class="search-input-my">
+        </div>
+        
+        <div id="grid-view-container" class="product-grid">
+            @if (Model.Products.Count() == 0) {
+                <div class="no-products">
+                    <i class="fas fa-box-open"></i>
+                    <h3>No Products Yet</h3>
+                    <p>Start adding your products to grow your inventory</p>
+                    <a asp-controller="Seller" asp-action="CreateProduct" class="add-product-btn">
+                        <i class="fas fa-plus"></i> Add Your First Product
+                    </a>
+                </div>
+            } else {
+                @foreach (var product in Model.Products) {
+                    <div class="product-card" data-product-id="@product.ProductId">
+                        <div class="product-header">
+                            <h3 class="product-title">@product.ProductName</h3>
+                            <span class="product-category">@product.Category</span>
+                            <span class="product-subcategory">@product.SubCategory</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-description">@product.ProductDescription</p>
+                            <div class="product-meta">
+                                <div class="product-price">$@product.Price</div>
+                                <div class="product-quantity">
+                                    <i class="fas fa-cubes"></i> Stock: @product.Qty
+                                </div>
+                            </div>
+                            <div class="product-tags">
+                                @foreach (var tag in product.HashTags?.Split(',') ?? Array.Empty<string>()) {
+                                    <span class="tag">#@tag.Trim()</span>
+                                }
+                            </div>
+                            <div class="product-actions">
+                                <a asp-controller="Seller" asp-action="Edit" asp-route-id="@product.ProductId" class="btn edit">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a asp-controller="Seller" asp-action="ArchiveProduct" asp-route-id="@product.ProductId" class="btn archive">
+                                    <i class="fas fa-archive"></i> Archive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        
+        <table id="list-view-container" class="product-table">
+            <thead>
+                <tr>
+                    <th>Product Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>SubCategory</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Hash Tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.Products) {
+                    <tr data-product-id="@product.ProductId">
+                        <td>@product.ProductName</td>
+                        <td>@product.ProductDescription</td>
+                        <td>@product.Category</td>
+                        <td>@product.SubCategory</td>
+                        <td>$@product.Price</td>
+                        <td>@product.Qty</td>
+                        <td>@product.HashTags</td>
+                        <td>
+                            <div class="product-actions">
+                                <a asp-controller="Seller" asp-action="Edit" asp-route-id="@product.ProductId" class="btn edit btn-sm" >
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-controller="Seller" asp-action="ArchiveProduct" asp-route-id="@product.ProductId" class=" archive ">
+                                    <i class="fas fa-archive"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gridViewBtn = document.getElementById('grid-view');
+            const listViewBtn = document.getElementById('list-view');
+            const gridViewContainer = document.getElementById('grid-view-container');
+            const listViewContainer = document.getElementById('list-view-container');
+            
+            // Initialize view
+            gridViewContainer.style.display = 'grid';
+            listViewContainer.style.display = 'none';
+            
+            // Toggle between grid and list views
+            gridViewBtn.addEventListener('click', function() {
+                gridViewContainer.style.display = 'grid';
+                listViewContainer.style.display = 'none';
+                gridViewBtn.classList.add('active-view');
+                listViewBtn.classList.remove('active-view');
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                gridViewContainer.style.display = 'none';
+                listViewContainer.style.display = 'table';
+                listViewBtn.classList.add('active-view');
+                gridViewBtn.classList.remove('active-view');
+            });
+            
+            // Animation for cards on scroll
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('product-search');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                // Filter grid view
+                const cards = document.querySelectorAll('.product-card');
+                cards.forEach(card => {
+                    const title = card.querySelector('.product-title').textContent.toLowerCase();
+                    const description = card.querySelector('.product-description').textContent.toLowerCase();
+                    const category = card.querySelector('.product-category').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Filter list view
+                const rows = document.querySelectorAll('.product-table tbody tr');
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    let match = false;
+                    cells.forEach(cell => {
+                        if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                            match = true;
+                        }
+                    });
+                    
+                    if (match) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

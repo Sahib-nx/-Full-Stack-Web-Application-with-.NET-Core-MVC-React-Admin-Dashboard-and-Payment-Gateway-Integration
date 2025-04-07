@@ -1,0 +1,177 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "About Us";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-header">
+            <h1 class="about-title">Our Story</h1>
+            <p class="about-subtitle">Crafting exquisite fragrances that capture moments, memories, and emotions since
+                2005</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="/api/placeholder/600/400" alt="Our Perfume Atelier">
+            </div>
+            <div class="about-text">
+                <h3>A Journey of Scents</h3>
+                <p>Founded in 2005, our perfume house was born from a passion for crafting unique scents that tell
+                    stories. What began as a small atelier in the heart of the city has grown into a beloved fragrance
+                    destination while maintaining our commitment to artisanal quality.</p>
+                <p>Each fragrance in our collection is thoughtfully composed using the finest ingredients sourced from
+                    around the world. We collaborate with master perfumers who share our vision of creating distinctive
+                    scents that evoke emotions and memories.</p>
+                <p>Our philosophy centers on the belief that perfume is more than just a scent—it's an invisible
+                    accessory that completes your personal style and leaves a lasting impression.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="values-section">
+    <div class="values-container">
+        <h2 class="values-title scroll-animation">Our Values</h2>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="value-title">Sustainability</h3>
+                <p class="value-text">We are committed to ethical sourcing and sustainable practices. Our packaging is
+                    eco-friendly and we work closely with suppliers who share our environmental values.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3 class="value-title">Artistry</h3>
+                <p class="value-text">We approach perfumery as an art form. Our creative process embraces innovation
+                    while honoring traditional techniques to create truly distinctive fragrances.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="value-title">Quality</h3>
+                <p class="value-text">We never compromise on quality. From the finest raw materials to the final
+                    product, we maintain exacting standards at every step of the creation process.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="about-container">
+        <h2 class="team-title scroll-animation">Meet Our Team</h2>
+
+        <div class="team-grid">
+            <div class="team-member scroll-animation">
+                <div class="member-image">
+                    <img src="/api/placeholder/300/300" alt="Team Member">
+                </div>
+                <h3 class="member-name">Sophia Laurent</h3>
+                <p class="member-position">Founder & Creative Director</p>
+                <p class="member-bio">With a background in fine arts and a lifelong passion for scents, Sophia brings a
+                    unique vision to our perfume house.</p>
+            </div>
+
+            <div class="team-member scroll-animation">
+                <div class="member-image">
+                    <img src="/api/placeholder/300/300" alt="Team Member">
+                </div>
+                <h3 class="member-name">David Chen</h3>
+                <p class="member-position">Master Perfumer</p>
+                <p class="member-bio">Trained in Grasse, David has over 15 years of experience crafting sophisticated
+                    fragrances for discerning clientele.</p>
+            </div>
+
+            <div class="team-member scroll-animation">
+                <div class="member-image">
+                    <img src="/api/placeholder/300/300" alt="Team Member">
+                </div>
+                <h3 class="member-name">Elena Rodriguez</h3>
+                <p class="member-position">Product Development</p>
+                <p class="member-bio">Elena's expertise in chemistry and aromatherapy helps us create unique formulas
+                    that stand the test of time.</p>
+            </div>
+
+            <div class="team-member scroll-animation">
+                <div class="member-image">
+                    <img src="/api/placeholder/300/300" alt="Team Member">
+                </div>
+                <h3 class="member-name">James Wilson</h3>
+                <p class="member-position">Sustainability Lead</p>
+                <p class="member-bio">James ensures our sourcing and production processes align with our commitment to
+                    environmental responsibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="bg-accent accent-1"></div>
+    <div class="bg-accent accent-2"></div>
+
+    <div class="cta-container">
+        <h2 class="cta-title">Experience Our Collection</h2>
+        <p class="cta-text">Visit our flagship store or explore our online boutique to discover fragrances that speak to
+            your unique personality and style. Each scent tells a story waiting to become part of yours.</p>
+        <a href="#" class="cta-button">Shop Now</a>
+    </div>
+</section>
+
+<script>
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function () {
+        const scrollElements = document.querySelectorAll('.scroll-animation');
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('active');
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove('active');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+
+        // Initialize
+        handleScrollAnimation();
+    });
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>

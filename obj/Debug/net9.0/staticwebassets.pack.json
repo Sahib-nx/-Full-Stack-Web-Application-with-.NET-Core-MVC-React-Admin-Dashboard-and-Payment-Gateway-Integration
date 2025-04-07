@@ -1,0 +1,405 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CRM.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CRM.incs9mbsqe.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\AdminDashboard.css",
+      "PackagePath": "staticwebassets\\css\\AdminDashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\Buyer.css",
+      "PackagePath": "staticwebassets\\css\\Buyer.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\Product.css",
+      "PackagePath": "staticwebassets\\css\\Product.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\Register.css",
+      "PackagePath": "staticwebassets\\css\\Register.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\Seller.css",
+      "PackagePath": "staticwebassets\\css\\Seller.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\footer.css",
+      "PackagePath": "staticwebassets\\css\\footer.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\AttarMAin.png",
+      "PackagePath": "staticwebassets\\images\\AttarMAin.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\AttarMain2.png",
+      "PackagePath": "staticwebassets\\images\\AttarMain2.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\AttarMainn.avif",
+      "PackagePath": "staticwebassets\\images\\AttarMainn.avif"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\FooterLogo.png",
+      "PackagePath": "staticwebassets\\images\\FooterLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\MainAttar.png",
+      "PackagePath": "staticwebassets\\images\\MainAttar.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\JwellofCaravans.png",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\JwellofCaravans.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\Lavender.jpg",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\Lavender.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\OneNight.jpg",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\OneNight.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\Oud.jpg",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\Oud.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\PerfumeofEast.png",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\PerfumeofEast.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\Roses.jpg",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\Roses.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\Secondsectiondecoration.png",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\Secondsectiondecoration.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\SecondSection\\Yasmeen.png",
+      "PackagePath": "staticwebassets\\images\\SecondSection\\Yasmeen.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\ThridSection\\AttarBig3.avif",
+      "PackagePath": "staticwebassets\\images\\ThridSection\\AttarBig3.avif"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\ThridSection\\IngrediantIMG.png",
+      "PackagePath": "staticwebassets\\images\\ThridSection\\IngrediantIMG.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\ThridSection\\ThridDec.png",
+      "PackagePath": "staticwebassets\\images\\ThridSection\\ThridDec.png"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\img1.jpg",
+      "PackagePath": "staticwebassets\\images\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\img2.jpg",
+      "PackagePath": "staticwebassets\\images\\img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\mainIMG.jpg",
+      "PackagePath": "staticwebassets\\images\\mainIMG.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\images\\mainIMG1.jpg",
+      "PackagePath": "staticwebassets\\images\\mainIMG1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\js\\AdminDashboard.js",
+      "PackagePath": "staticwebassets\\js\\AdminDashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sahib\\OneDrive\\Desktop\\CRM\\CRM\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.CRM.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.CRM.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.CRM.props",
+      "PackagePath": "build\\CRM.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.CRM.props",
+      "PackagePath": "buildMultiTargeting\\CRM.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.CRM.props",
+      "PackagePath": "buildTransitive\\CRM.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

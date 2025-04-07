@@ -1,0 +1,241 @@
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+
+
+
+a[b-dwxmuyclez] {
+  /* color: #0077cc;*/
+  color: #D3D3D3;
+}
+
+/* Navbar Hover Animation */
+.navbar .nav-item[b-dwxmuyclez] {
+  position: relative;
+}
+
+.navbar .nav-item[b-dwxmuyclez]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 3px;
+  background-color: #C09766;
+  transition: width 0.3s;
+
+}
+
+.navbar .nav-item:hover[b-dwxmuyclez]::after {
+  width: 100%;
+}
+
+button.accept-policy[b-dwxmuyclez] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-dwxmuyclez] {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* 
+.navbar-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: #F5E5CC ;
+  position: relative;
+  z-index: 10;
+}
+
+
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  position: relative;
+  align-items: center;
+
+
+
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:#4D3B2B;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.ghost-div-icons-inner {
+  display: none !important;
+
+}
+
+
+.Div-sidebar {
+  display: flex;
+}
+
+.close-btn {
+  display: none;
+  align-self: flex-start;
+  font-size: 30px;
+  color: #4D3B2B;
+  background: none;
+  border: none;
+
+}
+
+.topinner-sidebar {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1130px) {
+
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    position: relative;
+  
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+  }
+
+  .navbar-about {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-img {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+}
+
+
+
+
+@media(width <=900px) {
+
+
+  .hamburger {
+    display: block;
+
+
+  }
+
+  .close-btn {
+    display: inline-block;
+  }
+
+  .Div-sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100vh;
+    background: #F5E5CC;
+    color: #4D3B2B;
+    padding: 20px;
+    transition: 0.7s;
+    border-right: 1px solid grey;
+    flex-direction: column;
+
+  }
+
+  .ghost-div-icons-inner {
+    display: flex !important;
+  }
+
+  .ghost-div-icons-outer {
+    display: none !important;
+  }
+
+  .sidebar-img {
+    width: 70px;
+  
+
+  }
+
+  .topinner-sidebar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+  
+  }
+
+  .navbar-about .nav-links {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 30px;
+    margin-top: 30px
+  }
+
+  .navbar-about {
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+
+  .div-nav-img {
+    display: flex;
+
+  }
+  .div-btns {
+    position: absolute;
+    top: 15%;
+  }
+
+
+} */
+
+
+
+
