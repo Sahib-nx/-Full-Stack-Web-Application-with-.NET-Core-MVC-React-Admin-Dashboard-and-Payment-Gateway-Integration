@@ -244,4 +244,5 @@ C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\compressed\4fkupcgrsp-q
 C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\compressed\vbgy6vz87j-3wiy9hc0t0.gz
 C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\compressed\e69hv565qi-souusy826s.gz
 C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\compressed\rxizp6nufq-swesm5a2do.gz
-C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\compressed\1i8t1hpizk-c2m8pwkopm.gz
+C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\CRM.sourcelink.json
+C:\Users\sahib\OneDrive\Desktop\CRM\CRM\obj\Debug\net9.0\compressed\1i8t1hpizk-wtz2q4lw31.gz

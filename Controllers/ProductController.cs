@@ -22,8 +22,7 @@ namespace CRM.Controllers
             _tokenService = tokenService;
             _viewModel = new HybridModel
             {
-                Navbar = new NavbarModel { UserRole = Types.Role.Seller, Isloggedin = true },
-                Products = []
+                Navbar = new NavbarModel {Isloggedin = false },
             };
         }
 
@@ -46,39 +45,42 @@ namespace CRM.Controllers
             return View(_viewModel);
         }
 
+        [Authorize]  
         [HttpGet]
         public async Task<IActionResult> AddToCart(Guid ProductId)
         {
 
             try
             {
-                //Authorixation
-                var token = Request.Cookies["JusTryingToDo"];
-                if (token == null)
-                {
-                    return RedirectToAction("Login", "User");
-                }
-                var userId = _tokenService.VerifyTokenGetId(token);
+                // //Authorixation
+                // var token = Request.Cookies["JusTryingToDo"];
+                // if (token == null)
+                // {
+                //     return RedirectToAction("Login", "User");
+                // }
+                // var userId = _tokenService.VerifyTokenGetId(token);
+                Guid? userId = HttpContext.Items["UserId"] as Guid?;
+
                 //Then telling the seller they can't buy their own products
                 var product = await _dbcontext.Products.FindAsync(ProductId);
 
-                if (userId == product?.SellerId.ToString())
+                if (userId == product?.SellerId)
                 {
 
                     ViewBag.errormessage = "You can't add your own product to cart!";
-                    return View("Error");
+                    return View("Error" , _viewModel);
 
                 }
 
-                //if the user have no cart here we are creating the cart for them
-                var cart = await _dbcontext.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.BuyerId.ToString() == userId);
+                //if the user have no cart here we are creating the cart for him
+                var cart = await _dbcontext.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.BuyerId == userId);
 
                 if (cart == null)
                 {
 
                     cart = new Cart
                     {
-                        BuyerId = Guid.Parse(userId),
+                        BuyerId = (Guid)userId,
                         CartValue = 0
                     };
                     await _dbcontext.Carts.AddAsync(cart);
@@ -97,6 +99,7 @@ namespace CRM.Controllers
                         Quantity = 1
                     };
                     await _dbcontext.CartProducts.AddAsync(cartProduct);
+                    cart.CartValue += product.Price;
                     await _dbcontext.SaveChangesAsync();
                 }
 
@@ -114,7 +117,7 @@ namespace CRM.Controllers
             catch (Exception ex)
             {
                  ViewBag.errorMessage = $"Server Error:  {ex.Message}" ;
-                return View("Error", _viewModel);
+                return View("Error" , _viewModel);
 
           
             }

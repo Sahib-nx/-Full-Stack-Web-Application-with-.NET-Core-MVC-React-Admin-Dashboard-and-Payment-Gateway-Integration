@@ -107,17 +107,17 @@
                         
                         <div class="total-row">
                             <span>Subtotal</span>
-                            <strong>$ @Model?.Cart?.CartValue</strong>
+                            <strong>RS @Model?.Cart?.CartValue</strong>
                         </div>
                         
                         <div class="total-row">
                             <span>Discount</span>
-                            <strong>- $ 0</strong>
+                            <strong>- RS 0</strong>
                         </div>
                         
                         <div class="total-row highlight">
                             <span>Total</span>
-                            <strong>$ @Model?.Cart?.CartValue</strong>
+                            <strong>RS @Model?.Cart?.CartValue</strong>
                         </div>
                         
                         <a asp-controller="Buyer" asp-action="CheckOut" asp-route-CartId="@Model?.Cart?.CartId" class="btn checkout-btn">
